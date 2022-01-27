@@ -8,6 +8,7 @@
 import UIKit
 import Firebase
 
+
 class ViewController: UIViewController {
     
     
@@ -21,11 +22,12 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-                
-        
-        
     }
 
+    
+    
+    
+    
     @IBAction func signInClicked(_ sender: Any) {
         if emailText.text != "" && passwordText.text != "" {
             Auth.auth().signIn(withEmail: emailText.text!, password: passwordText.text!) { authdata, error in
@@ -39,6 +41,8 @@ class ViewController: UIViewController {
             makeAlert(titleInput: "Error", messageInput: "Username/Password is missing.")
         }
     }
+    
+    
     
     
     
